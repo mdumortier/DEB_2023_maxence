@@ -36,32 +36,6 @@ metaData.date_acc    = [2018 12 15];
 %% set data
 % zero-variate data;
 
-data.ab2 =	3	;
-units.ab2 =	'd'	;
-bibkey.ab2 =	'HayaYama1989'	;
-label.ab2 =	'age at birth'	;
-temp.ab2 =	C2K(18)	;
-units.temp.ab2 =	'K'	;
-label.temps.ab2 =	'temperature'	;
-comment.ab2 =	'day after hatching'	;
-
-data.aj =	30;
-units.aj =	'd';
-bibkey.aj =	'OhshNaga1997';
-label.aj =	'age at metamorphosis';
-comment.aj =	'day after hatching';
-
-Code	value	;
-data.ap =	2	;
-units.ap =	y'	;
-bibkey.ap =	SarrKind2021'	;
-label.ap =	age at puberty'	;
-
-data.Lh =	0.344;
-units.Lh =	'cm';
-bibkey.Lh =	'OhshNaka1997';
-label.Lh =	'total lenght at hatch';
-
 data.ab = 2;     units.ab = 'd';    label.ab = 'age at birth';              bibkey.ab = 'fishbase';    
   temp.ab = C2K(19);  units.temp.ab = 'K'; label.temp.ab = 'temperature';
 data.tp = 365;   units.tp = 'd';    label.tp = 'time since birth at puberty';            bibkey.tp = 'Wiki';
@@ -80,6 +54,45 @@ data.R13  = 10e3/365;   units.R13  = '#/d';  label.R13  = 'reprod rate at SL 13 
   temp.R13 = C2K(20);  units.temp.R13 = 'K'; label.temp.R13 = 'temperature';
 data.R18  = 46e3/365;   units.R18  = '#/d';  label.R18  = 'reprod rate at SL 18 cm';    bibkey.R18  = 'fishbase';  
   temp.R18 = C2K(20);  units.temp.R18 = 'K'; label.temp.R18 = 'temperature';
+
+data.ab2 =	3	;
+  units.ab2 =	'd'	;
+  bibkey.ab2 =	'HayaYama1989'	;
+  label.ab2 =	'age at birth'	;
+  temp.ab2 =	C2K(18)	;
+  units.temp.ab2 =	'K'	;
+  label.temps.ab2 =	'temperature'	;
+  comment.ab2 =	'day after hatching'	;
+data.aj =	30;
+  units.aj =	'd';
+  bibkey.aj =	'OhshNaga1997';
+  label.aj =	'age at metamorphosis';
+  comment.aj =	'day after hatching';
+data.ap =	2*365	;
+  units.ap =	'd'	;
+  bibkey.ap =	'SarrKind2021'	;
+  label.ap =	'age at puberty'	;
+data.am2 =	7*365	;
+  units.am2 =	'd'	;
+  bibkey.am2 =	'SarrKind2021'	;
+  label.am2 =	'life span'	;
+  
+data.Lh =	0.344;
+  units.Lh =	'cm';
+  bibkey.Lh =	'OhshNaka1997';
+  label.Lh =	'total lenght at hatch';
+data.Lb =	0.5	;
+  units.Lb =	'cm'	;
+  bibkey.Lb =	'WataSait1998'	;
+  label.Lb =	'fork length at birth'	;
+data.Lj =	2	;
+  units.Lj =	'cm'	;
+  bibkey.Lj =	'Mats1997'	;
+  label.Lj =	'standard length at metam'	;
+data.Lp2 =	7	;
+units.Lp2 =	'cm'	;
+bibkey.Lp2 =	'Mats1997'	;
+label.Lp2 =	'standard lenght at puberty'	;
   
 % uni-variate data
 
@@ -229,6 +242,34 @@ data.tL = [ % time since birth (d), standard length (cm)
 units.tL = {'d', 'cm'};  label.tL = {'time since birth', 'standard length'};  
 temp.tL = C2K(20);  units.temp.tL = 'K'; label.temp.tL = 'temperature';
 bibkey.tL = 'QuinNeva2000';
+
+data.tL2 = [ 	%	days after hatching (d)	Total length (cm)	
+		2	0.5	
+		15	1.6	
+		30	2.8	
+		50	4.1	
+		70	7.5	
+		80	8.7	];
+units.tL2 = 	{	'd','cm'	}	;
+label.tL2 =	{	'days after hatching','total length'	}	;
+bibkey.tL2 =		'NakaTaki1991'		;
+
+data.tL3 = [ 	%	days after hatching (d)	standard length (mm)	
+		0	0.48
+		5	7	
+		10	13	
+		15	14	
+		20	18	
+		25	22	
+		30	23	];
+units.tL = 	{	'd','mm'	}	;
+label.tL =	{	'days after hatching','standard length'	}	;
+temp.tL =		C2K(18)		;
+units.temp.tL =		K'		;
+label.temp.tL =		temperature'		;
+bibkey.tL =		HayaYama1989'		;
+
+
 
 %% set weights for all real data
 weights = setweights(data, []);
