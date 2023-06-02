@@ -36,6 +36,32 @@ metaData.date_acc    = [2018 12 15];
 %% set data
 % zero-variate data;
 
+data.ab2 =	3	;
+units.ab2 =	'd'	;
+bibkey.ab2 =	'HayaYama1989'	;
+label.ab2 =	'age at birth'	;
+temp.ab2 =	C2K(18)	;
+units.temp.ab2 =	'K'	;
+label.temps.ab2 =	'temperature'	;
+comment.ab2 =	'day after hatching'	;
+
+data.aj =	30;
+units.aj =	'd';
+bibkey.aj =	'OhshNaga1997';
+label.aj =	'age at metamorphosis';
+comment.aj =	'day after hatching';
+
+Code	value	;
+data.ap =	2	;
+units.ap =	y'	;
+bibkey.ap =	SarrKind2021'	;
+label.ap =	age at puberty'	;
+
+data.Lh =	0.344;
+units.Lh =	'cm';
+bibkey.Lh =	'OhshNaka1997';
+label.Lh =	'total lenght at hatch';
+
 data.ab = 2;     units.ab = 'd';    label.ab = 'age at birth';              bibkey.ab = 'fishbase';    
   temp.ab = C2K(19);  units.temp.ab = 'K'; label.temp.ab = 'temperature';
 data.tp = 365;   units.tp = 'd';    label.tp = 'time since birth at puberty';            bibkey.tp = 'Wiki';
