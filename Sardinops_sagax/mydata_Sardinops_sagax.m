@@ -254,22 +254,124 @@ units.tL2 = 	{	'd','cm'	}	;
 label.tL2 =	{	'days after hatching','total length'	}	;
 bibkey.tL2 =		'NakaTaki1991'		;
 
-data.tL3 = [ 	%	days after hatching (d)	standard length (mm)	
+data.tL3 = [ 	%	days after hatching (d)	standard length (cm)	
 		0	0.48
-		5	7	
-		10	13	
-		15	14	
-		20	18	
-		25	22	
-		30	23	];
-units.tL = 	{	'd','mm'	}	;
-label.tL =	{	'days after hatching','standard length'	}	;
-temp.tL =		C2K(18)		;
-units.temp.tL =		K'		;
-label.temp.tL =		temperature'		;
-bibkey.tL =		HayaYama1989'		;
+		5	0.7	
+		10	1.3	
+		15	1.4	
+		20	1.8	
+		25	2.2	
+		30	2.3	];
+units.tL3 = 	{	'd','cm'	}	;
+label.tL3 =	{	'days after hatching','standard length'	}	;
+temp.tL3 =		C2K(18)		;
+units.temp.tL3 =		'K'		;
+label.temp.tL3 =		'temperature'		;
+bibkey.tL3 =		'HayaYama1989'		;
 
+data.tWd = [	%	days after hatching (d)	dry weight (g)	
+		0	0.004	
+		5	0.007	
+		10	0.048	
+		15	0.095	
+		20	0.327	
+		25	0.733	
+		30	1.11	];
+units.tWd = 	{	'd','g'	}	;
+label.tWd =	{	'days after hatching','dry weight'	}	;
+temp.tWd =		C2K(18)		;
+units.temp.tWd =		'K'		;
+label.temp.tWd =		'temperature'		;
+bibkey.tWd =		'HayaYama1989'		;
 
+data.tL4 = [	%	Days after hatching (d)	Total length (cm)
+		50	4.149
+		55	4.669
+		60	5.165
+		65	5.638
+		70	6.089
+		75	6.520
+		80	6.931
+		85	7.323
+		90	7.697
+		95	8.054
+		100	8.395
+		105	8.719
+		110	9.029
+		115	9.325
+		120	9.607
+		125	9.876
+		130	10.133
+		135	10.378
+		140	10.612
+		145	10.835
+		150	11.048 ];
+units.tL4 = 	{	'd','cm'	}	;
+label.tL4 =	{	'day after hatching','Total length'	}	;
+bibkey.tL4 =	'OhshNaga1997'	
+
+data.LN = [	%	Scaled body lenght (cm)	Batch fecundity (# eggs)
+		17.6	12711
+		17.7	13083
+		17.8	13465
+		17.9	13855
+		18	14254
+		18.1	14663
+		18.2	15080
+		18.3	15508
+		18.4	15945
+		18.5	16392
+		18.6	16849
+		18.7	17316
+		18.8	17793
+		18.9	18281
+		19	18780
+		19.1	19289
+		19.2	19810
+		19.3	20342
+		19.4	20885
+		19.5	21440
+		19.6	22007
+		19.7	22585
+		19.8	23176
+		19.9	23779
+		20	24395
+		20.1	25024
+		20.2	25665
+		20.3	26320
+		20.4	26987
+		20.5	27669
+		20.6	28364
+		20.7	29073
+		20.8	29797
+		20.9	30535
+		21	31287
+		21.1	32054
+		21.2	32837
+		21.3	33634
+		21.4	34448
+		21.5	35276
+		21.6	36121
+		21.7	36982
+		21.8	37860
+		21.9	38754
+		22	39665
+		22.1	40593
+		22.2	41538
+		22.3	42501 ];
+units.tL = 	{	'cm','# eggs'	}	;
+label.tL =	{	'scaled body length','batch fecundity'	}	;
+bibkey.tL =	'Mori1997';
+
+data.tN = [	%	Age (d)	Batch fecundity (# eggs)	
+		2*365	18240	
+		3*365	21860	
+		4*365	25480	
+		5*365	29100	
+		6*365	32720	];
+units.tL = 	{	'd','# eggs'	}	;
+label.tL =	{	'scaled body length','batch fecundity'	}	;
+bibkey.tL =	'Mori1997'			;
 
 %% set weights for all real data
 weights = setweights(data, []);
